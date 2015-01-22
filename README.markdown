@@ -106,6 +106,8 @@ Translate a date value :
 
 - `{{ user.createdAt | localeDate('long','medium') }}` to have a long date and medium time, in the current locale
 
+- `{{ user.createdAt | localeDate('medium', 'none', locale, 'EEEE d MMMM HH:mm') }}` to define personnal format. Format use pattern from [SimpleDateFormat](http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html) 
+
 Translate a contry :
 
 - `{{ user.country | country }}` to have the country, in the current locale
