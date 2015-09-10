@@ -30,9 +30,9 @@ class TwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'country'     => new \Twig_Filter_Function('\BCC\ExtraToolsBundle\Twig\TwigExtension::countryFilter'),
-            'localeDate'  => new \Twig_Filter_Function('\BCC\ExtraToolsBundle\Twig\TwigExtension::localeDateFilter'),
-            'convertUnit' => new \Twig_Filter_Method($this, 'convertFilter'),
+            new \Twig_SimpleFilter('country', [$this,'countryFilter']),
+            new \Twig_SimpleFilter('localeDate', [$this,'localeDateFilter']),
+            new \Twig_SimpleFilter('convertUnit', [$this,'convertFilter']),
         );
     }
     
