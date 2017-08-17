@@ -59,7 +59,7 @@ services:
       - { name: bcc_extra_tools.ratio_unit_provider }
 
   bcc_extra_tools.twig.extension:
-    class: %bcc_extra_tools.extension.twig.class%
+    class: "%bcc_extra_tools.extension.twig.class%"
     calls:
       - [ setUnitConverter, [ "@bcc_extra_tools.unit_converter" ] ]
       - [ setTranslator, [ "@translator" ] ]
